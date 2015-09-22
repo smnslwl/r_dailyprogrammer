@@ -1,0 +1,6 @@
+LICENCE
+=======
+
+Free to use, free to modify.
+
+Basically, DO WHAT YOU WANT.
