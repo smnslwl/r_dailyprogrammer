@@ -22,14 +22,14 @@ I symlinked `palindromes` to `main.out` from a folder included in $PATH, for bet
 
     With no FILE, read standard input
 
-Checking input files where the first line specifies how many numbers to read.
+Checking input files where the first line specifies how many lines to read.
     
     $ palindromes -f input1.txt
     Not a palindrome
     $ palindromes -f input2.txt
     Palindrome
     
-Checking the number of palindromes in the[https://code.google.com/p/dotnetperls-controls/downloads/detail?name=enable1.txt&can=2&q=] (enable1.txt) wordlist. If the 'check each line of text separately' option is not specified here, the program will break as the file is too large to be read all at once. The -n option is used to supress the 'Palindrome/Not a palindrome' messages that would get displayed for each word.
+Checking the number of palindromes in the [https://code.google.com/p/dotnetperls-controls/downloads/detail?name=enable1.txt&can=2&q=] (enable1.txt) wordlist. If the 'check each line of text separately' option is not specified here, the program will break as the file is too large to be read all at once. The -n option is used to supress the 'Palindrome/Not a palindrome' messages that would get displayed for each word.
 
     $ time palindromes -lnt ../enable1.txt
     103 palindromes out of 172819
