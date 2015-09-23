@@ -39,3 +39,6 @@ __pycache__/
 
 # Word list
 enable1.txt
+
+# FUSE hidden files
+.fuse_hidden*
