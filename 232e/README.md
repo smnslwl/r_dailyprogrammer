@@ -17,7 +17,7 @@ I symlinked `palindromes` to `main.out` from a folder included in $PATH, for bet
        -h     display this help and exit
        -f     read N lines at most, N specified by the first line
        -l     check each line of text separately
-       -m     show whether each text is a palindrome or not
+       -n     supress 'Palindrome/Not a palindrome' messages
        -t     show total number of palindromes found
 
     With no FILE, read standard input
