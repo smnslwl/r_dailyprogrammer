@@ -36,3 +36,6 @@ bin/
 # Python
 __pycache__/
 *.py[cod]
+
+# Word list
+enable1.txt
