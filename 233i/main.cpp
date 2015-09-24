@@ -23,7 +23,6 @@ void update()
 
     for (uint r = 1; r <= rs; ++r)
         for (uint c = 1; c <= cs; ++c) {
-            tmp[r][c] = '0' + neighbours(r, c);
             switch (neighbours(r, c)) {
                 case 2: 
                     tmp[r][c] = g[r][c];
