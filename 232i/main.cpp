@@ -38,26 +38,23 @@ int main(int argc, char* argv[])
             std::istringstream iss(line);
             double a, b;
             char c_;
-            if (iss >> c_ >> a >> c_ >> b >> c_) {
+            if (iss >> c_ >> a >> c_ >> b >> c_)
                 points.push_back(std::make_pair(a, b));
-            }
         }
     }
     
-    Point closest_point1    = points[0];
-    Point closest_point2    = points[1];
+    Point closest_point1 = points[0];
+    Point closest_point2 = points[1];
     double closest_distance = distance(closest_point1, closest_point2);
 
     // Find the points with the closest distance
-    for (auto p: points) {
-        for (auto q: points) {
+    for (auto p: points)
+        for (auto q: points)
             if (p != q && distance(p, q) < closest_distance) {
                 closest_distance = distance(p, q);
                 closest_point1 = p;
                 closest_point2 = q;
             }
-        }
-    }
     
     std::cout << std::setprecision(16) << "Closest points: \n" 
     << closest_point1 << "\n" << closest_point2 << std::endl;

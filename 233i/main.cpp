@@ -22,7 +22,7 @@ void update()
     auto tmp(g);
 
     for (uint r = 1; r <= rs; ++r)
-        for (uint c = 1; c <= cs; ++c) {
+        for (uint c = 1; c <= cs; ++c)
             switch (neighbours(r, c)) {
                 case 2: 
                     tmp[r][c] = g[r][c];
@@ -34,12 +34,11 @@ void update()
                     tmp[r][c] = ' ';
                     break;
             }
-        }
     
     chars.clear();
     for (uint r = 1; r <= rs; ++r)
         for (uint c = 1; c <= cs; ++c)
-                if ((g[r][c] = tmp[r][c]) != ' ')
+            if ((g[r][c] = tmp[r][c]) != ' ')
                     chars.push_back(g[r][c]);
                 
     t++;
@@ -49,21 +48,19 @@ void fill_from(const std::vector<std::string>& v)
 {
     for (uint r = 0; r < v.size(); ++r) {
         std::string line = v[r];
-        for (uint c = 0; c < line.size(); ++c) {
+        for (uint c = 0; c < line.size(); ++c)
             if ((g[r + 1][c + 1] = line[c]) != ' ')
                 chars.push_back(g[r + 1][c + 1]);
-        }
     }
 }
 
 void display() const
 {
     std::cout << rs << "x" << cs << " t=" << t << "\n";
-    
     for (uint r = 0; r < rs + 2; ++r) {
-        for (uint c = 0; c < cs + 2; ++c) {
+        for (uint c = 0; c < cs + 2; ++c)
             std::cout << g[r][c] << " ";
-        }
+        std::cout << "\n";
         std::cout << "\n";
     }
 }
