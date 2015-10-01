@@ -164,7 +164,7 @@ display_help(const char* cmd)
             "   -h     display this help and exit\n"
             "   -f     read N lines at most, N specified by the first line\n"
             "   -l     check each line of text separately\n"
-            "   -m     show whether each text is a palindrome or not\n"
+            "   -n     supress 'Palindrome/Not a palindrome' messages\n"
             "   -t     show total number of palindromes found\n"
             "\n"
             "With no FILE, read standard input\n";
