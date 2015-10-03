@@ -35,6 +35,7 @@ LEVELS      =   {
 NAMES       =   [
                     'main',
                     'Main',
+                    'bonus',
                 ]
 
 LANGS       =   {
@@ -42,6 +43,7 @@ LANGS       =   {
                     '.c'     : 'C',
                     '.cpp'   : 'C++',
                     '.hs'    : 'Haskell',
+                    '.rb'    : 'Ruby',
                 }
 
 
@@ -57,7 +59,7 @@ for challenge in sorted(dirs):
     title, date, url = lines[0][1:], lines[2], lines[3]
     challenge_id = '{} {}'.format(challenge[:-1], LEVELS[challenge[-1]])
     
-
+    
     files = [x for x in os.listdir(path) 
                 if os.path.isfile(os.path.join(path, x))]
 
@@ -69,11 +71,16 @@ for challenge in sorted(dirs):
                                 LANGS[ext], (os.path.join(path, filename))
                             ))
     
-    
+    if solutions:
+        all_solutions = ', '.join(solutions)
+    else:
+        all_solutions = 'Incomplete'
+
     solution_list += SOLUTION.format(
                         challenge_id=challenge_id, date=date, url=url, 
-                        title=title, solutions=', '.join(solutions)
+                        title=title, solutions=all_solutions
                      )
+
 
 with open('README.md', 'w') as f:
     f.write(README.format(solution_list=solution_list))
